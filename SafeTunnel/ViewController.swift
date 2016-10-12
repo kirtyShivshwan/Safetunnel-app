@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var blueTunnel: UIImageView!
+    @IBOutlet weak var redTunnel: UIImageView!
+    
+    @IBOutlet weak var hideBlue: UIButton!
+    @IBOutlet weak var hideRed: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +27,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func hideBlueTunnel(sender: AnyObject) {
+        blueTunnel.hidden = true
+        redTunnel.hidden = false
+        
+    }
+    
+    
+    @IBAction func hideRedTunnel(sender: AnyObject) {
+        blueTunnel.hidden = false
+        redTunnel.hidden = true
+    }
 }
 
